@@ -5,7 +5,9 @@ import argparse
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
 from softmax_one import softmax1
+
 import numpy as np
+import logging
 
 
 def benchmark(func, x, dim):
@@ -16,6 +18,9 @@ def benchmark(func, x, dim):
     return end - start
 
 if __name__ == "__main__":
+    # Set up logging
+    logging.basicConfig(level=logging.INFO)
+
     parser = argparse.ArgumentParser(description='Benchmarking Softmax1.')
     parser.add_argument('--no-chart', action='store_true',
                         help='Do not display chart')
@@ -31,12 +36,16 @@ if __name__ == "__main__":
 
     # Run the benchmark
     for size in sizes:
+        logging.info(f'Running benchmark for tensor size {size}...')
         x = torch.rand(size)
         time_softmax = benchmark(F.softmax, x, dim=-1)
         time_softmax1 = benchmark(softmax1, x, dim=-1)
 
         times_softmax.append(time_softmax)
         times_softmax1.append(time_softmax1)
+
+        logging.info(f'F.softmax time: {time_softmax} s')
+        logging.info(f'softmax1 time: {time_softmax1} s')
 
     # Plot the results
     if not args.no_chart:
@@ -48,4 +57,5 @@ if __name__ == "__main__":
         plt.ylabel('Time (s)')
         plt.title('Benchmarking Results')
         plt.show()
-
+    else:
+        logging.info('Chart display is off.')
