@@ -23,6 +23,9 @@ Attention mechanism has been a groundbreaking innovation in deep learning, and f
 
 Introducing Quiet Attention, an innovative tweak to the traditional softmax function, allowing the attention heads to express 'no preference' and remain quiet. The slight adjustment to the denominator allows the vector to tend to zero if it prefers, rather than forcing the attention head to make an annotation.
 
+[This is a paper by Evan Miller, here's the link](https://www.evanmiller.org/attention-is-off-by-one.html)
+
+
 ## Formula
 
 Here's the modified formula for the softmax function, also referred to as "Softmax1" or "Quiet Attention" formula:
