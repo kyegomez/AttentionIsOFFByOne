@@ -31,7 +31,7 @@ Here's the modified formula for the softmax function, also referred to as "Softm
 (softmax1(x))_i = exp(x_i) / (1 + sum(exp(x_j) for all j))
 ```
 
-## Working
+## Architecture
 
 The critical difference between Softmax1 and traditional softmax lies in their negative limit behavior. In a scenario where all the entries in a vector are significantly less than zero and the model wants to avoid an annotation altogether, softmax1 allows it, unlike softmax.
 
