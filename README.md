@@ -1,6 +1,20 @@
-# Quiet Attention - A Novel Modification to Softmax Function for Attention Mechanism
+<div class='center'>
 
-![Logo](link-to-logo)
+# Join Agora
+Agora is devoted to advancing Humanity with extremely advanced AI Research
+
+![Logo](partnership-banner.png)
+
+Join our discord here!
+![Join the Agora discord](https://img.shields.io/discord/1110910277110743103?label=Discord&logo=discord&logoColor=white&style=plastic&color=d7b023)
+
+
+</div>
+
+
+
+
+# Quiet Attention - A Novel Modification to Softmax Function for Attention Mechanism
 
 Attention mechanism has been a groundbreaking innovation in deep learning, and forms the backbone of the Transformer models, which powers the state-of-the-art language models like GPT and BERT. However, there is a persistent off-by-one bug in the traditional attention mechanism that can make the models harder to compress and deploy.
 
