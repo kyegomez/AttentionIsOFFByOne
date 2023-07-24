@@ -19,7 +19,7 @@ Join our discord here!
 (softmax1(x))_i = exp(x_i) / (1 + sum(exp(x_j) for all j))
 ```
 
-Attention mechanism has been a groundbreaking innovation in deep learning, and forms the backbone of the Transformer models, which powers the state-of-the-art language models like GPT and BERT. However, there is a persistent off-by-one bug in the traditional attention mechanism that can make the models harder to compress and deploy.
+Attention mechanism has been a groundbreaking innovation in deep learning, and forms the backbone of the Transformer models, which powers the state-of-the-art language models like GPT4 and LLAMA. However, there is a persistent off-by-one bug in the traditional attention mechanism that can make the models harder to compress and deploy.
 
 Introducing Quiet Attention, an innovative tweak to the traditional softmax function, allowing the attention heads to express 'no preference' and remain quiet. The slight adjustment to the denominator allows the vector to tend to zero if it prefers, rather than forcing the attention head to make an annotation.
 
@@ -76,7 +76,7 @@ You can use the Softmax1 function just like you would use the traditional softma
 
 ```python
 import torch
-from attention import softmax1
+from softmax_one.softmax_one import softmax1
 
 x = torch.randn(5)
 y = softmax1(x, dim=0)
