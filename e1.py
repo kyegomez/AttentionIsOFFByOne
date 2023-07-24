@@ -4,3 +4,5 @@ from softmax_one.softmax_one import softmax1
 x = torch.randn(5)
 y = softmax1(x, dim=0)
 
+print(y)
+print(y.shape)
