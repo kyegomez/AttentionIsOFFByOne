@@ -21,33 +21,53 @@ The critical difference between Softmax1 and traditional softmax lies in their n
 Softmax1 essentially provides an 'escape hatch' when the attention head wants to remain quiet. The total output weight from Softmax1 varies based on the vector input, as opposed to softmax, which always emits the same total weight. This can significantly improve the model's performance, especially when dealing with noisy inputs.
 
 
-## Getting Started
+## Installation
 
-1. Clone the repository:
+Clone the repository:
+
 ```
-git clone https://github.com/user/quiet-attention.git
+git clone https://github.com/kyegomez/AttentionIsOFFByOne.git
+cd AttentionIsOFFByOne
 ```
-2. Install dependencies:
+
+## Unit Tests
+
+This repository contains extensive unit tests that aim to cover all possible scenarios and ensure the reliability of the solution. You can run the tests using the following command:
+
+```bash
+python -m unittest test.py
 ```
-pip install -r requirements.txt
+
+## Benchmarks
+
+A benchmarking suite is included to compare the performance of the `softmax1` function with the PyTorch native `softmax` function. We provide metrics across different tensor sizes to understand how they perform under varying loads.
+
+To run the benchmarks, use the following command:
+
+```bash
+python benchmark.py
 ```
-3. Import the model and use it in your Pytorch code:
+
+You can find the results in the `benchmarks/results/` directory. The results include execution time and memory usage for each function across a variety of tensor sizes.
+
+## Usage
+
+You can use the Softmax1 function just like you would use the traditional softmax function. Here's a simple example:
+
 ```python
-from quiet_attention import QuietAttention
+import torch
+from attention import softmax1
 
-# Replace traditional softmax attention with Quiet Attention in your transformer model
-attention_layer = QuietAttention()
+x = torch.randn(5)
+y = softmax1(x, dim=0)
 ```
 
-## Contributing
+For more detailed examples and use cases, refer to the `examples/` directory.
 
-We encourage you to contribute to Quiet Attention! Please check out the [Contributing to Quiet Attention guide](CONTRIBUTING.md) for guidelines about how to proceed.
+## Contributions
+
+Contributions are welcome! Please submit a pull request or create an issue if you have any improvements or find any bugs.
 
 ## License
 
-This project is licensed under the terms of the MIT license. See [LICENSE](LICENSE.md) for additional details.
-
-
-## Acknowledgements
-
-Special thanks to the researchers and the open-source community who made it possible to build upon their initial work.
+This project is licensed under the MIT License - see the `LICENSE` file for details.
