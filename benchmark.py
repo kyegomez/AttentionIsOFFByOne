@@ -1,4 +1,5 @@
 import timeit
+import time
 import torch
 import numpy as np
 
@@ -6,10 +7,12 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 from softmax_one import softmax1
 
-def benchmark(func, x):
-    start = timeit.default_timer()
-    func(x)
-    return timeit.default_timer() - start
+def benchmark(func, x, dim):
+    start = time.time()
+    for _ in range(1000):
+        func(x, dim)
+    end = time.time()
+    return end - start
 
 # Define the sizes to test
 sizes = [(10, 10), (100, 100), (1000, 1000), (10000, 10000)]
@@ -22,7 +25,7 @@ times_softmax1 = []
 for size in sizes:
     x = torch.rand(size)
     time_softmax = benchmark(F.softmax, x)
-    time_softmax1 = benchmark(softmax1, x)
+    time_softmax1 = benchmark(softmax1, x, dim=0)
     
     times_softmax.append(time_softmax)
     times_softmax1.append(time_softmax1)

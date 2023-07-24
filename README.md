@@ -79,7 +79,6 @@ x = torch.randn(5)
 y = softmax1(x, dim=0)
 ```
 
-For more detailed examples and use cases, refer to the `examples/` directory.
 
 ## Contributions
 
