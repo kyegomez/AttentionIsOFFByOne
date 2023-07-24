@@ -47,20 +47,6 @@ We encourage you to contribute to Quiet Attention! Please check out the [Contrib
 
 This project is licensed under the terms of the MIT license. See [LICENSE](LICENSE.md) for additional details.
 
-## Citation
-
-If you use Quiet Attention in your research, please cite this repository:
-
-```
-@misc{QuietAttention,
-  author = {Your Name},
-  title = {Quiet Attention: A Novel Modification to Softmax for Attention Mechanism},
-  year = {2023},
-  publisher = {GitHub},
-  journal = {GitHub Repository},
-  howpublished = {\url{https://github.com/user/quiet-attention}}
-}
-```
 
 ## Acknowledgements
 
