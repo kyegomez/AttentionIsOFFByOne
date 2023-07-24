@@ -3,7 +3,7 @@
 # Join Agora
 Agora is devoted to advancing Humanity with extremely advanced AI Research
 
-<img src="partnership-banner.png" alt="Agora banner" width="500" height="500" >
+<img src="partnership-banner.png" alt="Agora banner" width="1000" height="500" >
 
 Join our discord here!
 ![Join the Agora discord](https://img.shields.io/discord/1110910277110743103?label=Discord&logo=discord&logoColor=white&style=plastic&color=d7b023)
