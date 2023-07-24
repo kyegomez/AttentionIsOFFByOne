@@ -92,7 +92,7 @@ Contributions are welcome! Please submit a pull request or create an issue if yo
 This project is licensed under the MIT License - see the `LICENSE` file for details.
 
 
-# Note 
+# Experiments 
 
 It's really slow in basic python I will implement it in cuda
 

@@ -1,6 +1,6 @@
 import unittest
 import torch
-from softmax_one import ScaledDotProductAttention
+from softmax_one.softmax_one import ScaledDotProductAttention
 
 class TestScaledDotProductAttention(unittest.TestCase):
 

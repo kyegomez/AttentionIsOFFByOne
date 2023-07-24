@@ -4,7 +4,7 @@ import argparse
 
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-from softmax_one import softmax1
+from softmax_one.softmax_one import softmax1
 
 import numpy as np
 import logging
