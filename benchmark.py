@@ -4,7 +4,7 @@ import argparse
 
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-from softmax_one.softmax_one import softmax1
+from softmax_one.softmax_one import softmax_one
 
 import numpy as np
 import logging
@@ -39,19 +39,19 @@ if __name__ == "__main__":
         logging.info(f'Running benchmark for tensor size {size}...')
         x = torch.rand(size)
         time_softmax = benchmark(F.softmax, x, dim=-1)
-        time_softmax1 = benchmark(softmax1, x, dim=-1)
+        time_softmax1 = benchmark(softmax_one, x, dim=-1)
 
         times_softmax.append(time_softmax)
         times_softmax1.append(time_softmax1)
 
         logging.info(f'F.softmax time: {time_softmax} s')
-        logging.info(f'softmax1 time: {time_softmax1} s')
+        logging.info(f'softmax_one time: {time_softmax1} s')
 
     # Plot the results
     if not args.no_chart:
         plt.figure(figsize=(10, 6))
         plt.plot([np.prod(s) for s in sizes], times_softmax, label='F.softmax')
-        plt.plot([np.prod(s) for s in sizes], times_softmax1, label='softmax1')
+        plt.plot([np.prod(s) for s in sizes], times_softmax1, label='softmax_one')
         plt.legend()
         plt.xlabel('Tensor Size')
         plt.ylabel('Time (s)')

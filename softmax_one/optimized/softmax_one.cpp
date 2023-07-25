@@ -1,7 +1,7 @@
 #include <vector>
 #include <cmath>
 
-std::vector<float> softmax1(std::vector<float> x) {
+std::vector<float> softmax_one(std::vector<float> x) {
     // Find max of x
     float max_x = *max_element(x.begin(), x.end());
 
@@ -19,7 +19,7 @@ std::vector<float> softmax1(std::vector<float> x) {
         sum_exp_x += exp_elem;
     }
 
-    // Apply softmax1 formula
+    // Apply softmax_one formula
     std::vector<float> softmax1_x;
     for (const auto &elem : exp_x) {
         softmax1_x.push_back(elem / (1 + sum_exp_x));
