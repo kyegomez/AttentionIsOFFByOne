@@ -32,26 +32,26 @@ if __name__ == "__main__":
 
     # Arrays to store results
     times_softmax = []
-    times_softmax1 = []
+    times_softmax_one = []
 
     # Run the benchmark
     for size in sizes:
         logging.info(f'Running benchmark for tensor size {size}...')
         x = torch.rand(size)
         time_softmax = benchmark(F.softmax, x, dim=-1)
-        time_softmax1 = benchmark(softmax_one, x, dim=-1)
+        time_softmax_one = benchmark(softmax_one, x, dim=-1)
 
         times_softmax.append(time_softmax)
-        times_softmax1.append(time_softmax1)
+        times_softmax_one.append(time_softmax_one)
 
         logging.info(f'F.softmax time: {time_softmax} s')
-        logging.info(f'softmax_one time: {time_softmax1} s')
+        logging.info(f'softmax_one time: {time_softmax_one} s')
 
     # Plot the results
     if not args.no_chart:
         plt.figure(figsize=(10, 6))
         plt.plot([np.prod(s) for s in sizes], times_softmax, label='F.softmax')
-        plt.plot([np.prod(s) for s in sizes], times_softmax1, label='softmax_one')
+        plt.plot([np.prod(s) for s in sizes], times_softmax_one, label='softmax_one')
         plt.legend()
         plt.xlabel('Tensor Size')
         plt.ylabel('Time (s)')

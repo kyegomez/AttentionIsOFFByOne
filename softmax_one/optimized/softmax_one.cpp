@@ -20,10 +20,10 @@ std::vector<float> softmax_one(std::vector<float> x) {
     }
 
     // Apply softmax_one formula
-    std::vector<float> softmax1_x;
+    std::vector<float> softmax_one_x;
     for (const auto &elem : exp_x) {
-        softmax1_x.push_back(elem / (1 + sum_exp_x));
+        softmax_one_x.push_back(elem / (1 + sum_exp_x));
     }
 
-    return softmax1_x;
+    return softmax_one_x;
 }
