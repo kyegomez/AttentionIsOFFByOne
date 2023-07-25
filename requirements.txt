@@ -1,1 +1,6 @@
 torch
+
+
+cupy-cuda12x
+matplotlib
+unittest
