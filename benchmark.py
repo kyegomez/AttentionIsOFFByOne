@@ -4,7 +4,8 @@ import argparse
 
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
-from softmax_one.softmax_one import softmax_one
+from softmax_one.softmax_one_cupy import softmax_one_cupy as softmax_one
+# from softmax_one.softmax_one import softmax_one
 
 import numpy as np
 import logging
