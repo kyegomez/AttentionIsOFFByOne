@@ -9,12 +9,11 @@ softmax_one_cpp = Extension(
 )
 
 setup(
-    name="softmax_one_cpp",
-    verison=0.1,
+    name='softmax_one_cpp',
+    version='0.1',
     ext_modules=[softmax_one_cpp],
-    cmdclass=('build_ext', cpp_extension.BuildExtension)
+    cmdclass={'build_ext': cpp_extension.BuildExtension},
 )
-
 # # python setup.py install
 # import softmax1_cpp
 # def test_softmax1_cpp():
