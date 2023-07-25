@@ -97,7 +97,6 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 It's really slow in basic python I will implement it in cuda
 
 ```
-ommune@r1n2a6000bittensor:~/AttentionIsOFFByOne$ python3 benchmark.py --no-chart
 INFO:root:Running benchmark for tensor size (10, 10)...
 INFO:root:F.softmax time: 0.0022182464599609375 s
 INFO:root:softmax_one time: 0.04441571235656738 s
@@ -111,5 +110,5 @@ INFO:root:Running benchmark for tensor size (10000, 10000)...
 INFO:root:F.softmax time: 52.80402970314026 s
 INFO:root:softmax_one time: 128.78072810173035 s
 INFO:root:Chart display is off.
-commune@r1n2a6000bittensor:~/AttentionIsOFFByOne$ 
+
 ```
