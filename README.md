@@ -1,4 +1,4 @@
-[Join Agora](https://discord.gg/qUtxnK2NMf) the community of AI engineers changing the world with their creations.🥳🎉🎊
+[Join Agora](https://discord.gg/qUtxnK2NMf) the community of engineers changing the world with their creations.🥳🎉🎊
 
 <div class='center'>
 
