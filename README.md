@@ -4,7 +4,7 @@
 # Quiet Attention - A Novel Modification to Softmax Function for Attention Mechanism
 
 ```math
-(softmax_one(x))_i = exp(x_i) / (1 + sum(exp(x_j) for all j))
+(\text{softmax}_1(x))_i = \frac{\exp(x_i)}{1 + \sum_j \exp(x_j)}
 ```
 
 Attention mechanism has been a groundbreaking innovation in deep learning, and forms the backbone of the Transformer models, which powers the state-of-the-art language models like GPT4 and LLAMA. However, there is a persistent off-by-one bug in the traditional attention mechanism that can make the models harder to compress and deploy.
@@ -19,7 +19,7 @@ Introducing Quiet Attention, an innovative tweak to the traditional softmax func
 Here's the modified formula for the softmax function, also referred to as "Softmax1" or "Quiet Attention" formula:
 
 ```math
-(softmax_one(x))_i = exp(x_i) / (1 + sum(exp(x_j) for all j))
+(\text{softmax}_1(x))_i = \frac{\exp(x_i)}{1 + \sum_j \exp(x_j)}
 ```
 
 ## Architecture
