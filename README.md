@@ -35,7 +35,9 @@ Clone the repository:
 
 ```
 git clone https://github.com/kyegomez/AttentionIsOFFByOne.git
+pip3 install -r requirements.txt
 cd AttentionIsOFFByOne
+python3 example.py
 ```
 
 ## Unit Tests
