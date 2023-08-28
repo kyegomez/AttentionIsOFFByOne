@@ -79,18 +79,6 @@ python benchmark.py
 
 You can find the results in the `benchmarks/results/` directory. The results include execution time and memory usage for each function across a variety of tensor sizes.
 
-## Usage
-
-You can use the Softmax1 function just like you would use the traditional softmax function. Here's a simple example:
-
-```python
-import torch
-from softmax_one.softmax_one import softmax_one
-
-x = torch.randn(5)
-y = softmax_one(x, dim=0)
-```
-
 
 ## Implementation
 
