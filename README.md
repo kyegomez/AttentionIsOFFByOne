@@ -31,13 +31,32 @@ Softmax1 essentially provides an 'escape hatch' when the attention head wants to
 
 ## Installation
 
-Clone the repository:
+Clone the repository or install with pip
 
-```
+```bash
 git clone https://github.com/kyegomez/AttentionIsOFFByOne.git
 pip3 install -r requirements.txt
 cd AttentionIsOFFByOne
 python3 example.py
+```
+
+```
+pip install softmax-one
+```
+
+## Usage
+
+```python
+
+import torch
+from softmax_one.softmax_one import softmax_one
+
+x = torch.randn(5)
+y = softmax_one(x, dim=0)
+
+print(y)
+print(y.shape)
+
 ```
 
 ## Unit Tests

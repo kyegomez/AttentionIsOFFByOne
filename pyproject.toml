@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "softmax-one"
+version = "0.0.2"
+description = "softmax-one - Pytorch"
+authors = ["Kye Gomez <kye@apac.ai>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/kyegomez/AttentionIsOFFByOne"
+keywords = ["artificial intelligence", "attention mechanism", "transformers"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.6",
+]
+packages = [
+    { include = "softmax_one" },
+    { include = "softmax_one/**/*.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+torch = "*"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
