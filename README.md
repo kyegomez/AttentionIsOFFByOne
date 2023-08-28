@@ -1,18 +1,4 @@
-[Join Agora](https://discord.gg/qUtxnK2NMf) the community of engineers changing the world with their creations.🥳🎉🎊
-
-<div class='center'>
-
-# Join Agora
-Agora is devoted to advancing Humanity with extremely advanced AI Research
-
-<img src="partnership-banner.png" alt="Agora banner" width="700" height="500" >
-
-Join our discord here!
-![Join the Agora discord](https://img.shields.io/discord/1110910277110743103?label=Discord&logo=discord&logoColor=white&style=plastic&color=d7b023)
-
-</div>
-
-
+[![Multi-Modality](agorabanner.png)](https://discord.gg/qUtxnK2NMf)
 
 
 # Quiet Attention - A Novel Modification to Softmax Function for Attention Mechanism
